@@ -38,18 +38,15 @@ class Originator
      * the client should backup the state before launching methods of the
      * business logic via the save() method.
      */
-    public function doOperation()
+    public function doOperation($line)
     {
         echo "Originator: Taking input from the user\n";
-        $this->state = $this->getUserInput();
+        $this->state = $this->getUserInput($line);
         echo "Originator: and my state has changed to: {$this->state}\n";
     }
 
-    private function getUserInput()
+    private function getUserInput($line)
     {
-        echo "Please enter your text :";
-        $handle = fopen ("php://stdin","r");
-        $line = fgets($handle);
         return $line;
     }
 

@@ -21,19 +21,19 @@ $originator = new Originator("---");
 $caretaker = new Caretaker($originator);
 
 $caretaker->backup();
-$originator->doOperation();
+$originator->doOperation('AAA');
 
 echo "\n";
 $caretaker->showHistory();
 
 $caretaker->backup();
-$originator->doOperation();
+$originator->doOperation('BBB');
 
 echo "\n";
 $caretaker->showHistory();
 
 $caretaker->backup();
-$originator->doOperation();
+$originator->doOperation('CCC');
 
 echo "\n";
 $caretaker->showHistory();
@@ -51,7 +51,10 @@ echo "\n";
 $caretaker->showHistory();
 
 $caretaker->backup();
-$originator->doOperation();
+$originator->doOperation('DDD');
+
+$caretaker->backup();
+$originator->doOperation('EEE');
 
 echo "\n";
 $caretaker->showHistory();
